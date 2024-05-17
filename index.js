@@ -12,7 +12,7 @@ app.use(express.json());
 //password is MYN@MEis30
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Making Online Exchange Books Store!!')
 })
 
 //MongoDB configuration
@@ -94,6 +94,14 @@ async function run() {
             }
             const result= await bookCollection.find(query).toArray();
             res.send(result);
+        })
+
+        // get a single book data
+        app.get("/book/:id", async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: new ObjectId(id) };
+            const result = await bookCollections.findOne(filter);
+            res.send(result)
         })
         
         // Send a ping to confirm a successful connection
