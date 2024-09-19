@@ -1,7 +1,7 @@
 {
-  "name": "mern-server",
+  "name": "bookmanagerserver",
   "version": "1.0.0",
-  "description": "```\r {\r     \"version\": 2,\r     \"builds\": [\r         {\r             \"src\": \"./index.js\",\r             \"use\": \"@vercel/node\"\r         }\r     ],\r     \"routes\": [\r         {\r             \"src\": \"/(.*)\",\r             \"dest\": \"/\",\r             \"methods\": [\"GET\", \"POST\", \"PUT\", \"PATCH\", \"DELETE\", \"OPTIONS\"]\r         }\r     ]\r }\r ```",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,6 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongodb": "^6.1.0",
-    "nodemon": "^3.0.1",
-    "punycode": "^2.3.1"
+    "nodemon": "^3.0.1"
   }
 }
