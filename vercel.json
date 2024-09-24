@@ -3,9 +3,13 @@
     "name": "bookshelf",
     "builds": [
       {
-        "src": "mern-client/vite.config.js",
+        "src": "mern-client/package.json",
         "use": "@vercel/static-build",
-        "config": { "distDir": "mern-client/dist" }
+        "config": {
+          "distDir": "mern-client/dist",
+          "buildCommand": "npm run build", 
+          "outputDirectory": "dist"
+        }
       },
       {
         "src": "mern-server/index.js",
