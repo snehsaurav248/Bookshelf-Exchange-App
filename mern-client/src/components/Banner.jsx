@@ -31,5 +31,3 @@ const Banner = () => {
 }
 
 export default Banner
-
-//2:07:29

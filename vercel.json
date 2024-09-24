@@ -1,0 +1,26 @@
+{
+    "version": 2,
+    "name": "bookshelf",
+    "builds": [
+      {
+        "src": "mern-client/vite.config.js",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "mern-client/dist" }
+      },
+      {
+        "src": "mern-server/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/mern-server/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/mern-client/dist/index.html"
+      }
+    ]
+  }
+  
